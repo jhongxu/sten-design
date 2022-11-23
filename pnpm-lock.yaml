@@ -1,10 +1,26 @@
 lockfileVersion: 5.4
 
-specifiers:
-  lerna: ^6.0.3
+importers:
 
-devDependencies:
-  lerna: registry.npmmirror.com/lerna/6.0.3
+  .:
+    specifiers:
+      lerna: ^6.0.3
+    devDependencies:
+      lerna: registry.npmmirror.com/lerna/6.0.3
+
+  packages/sten-components:
+    specifiers:
+      '@sten-design/icons': 1.0.0
+      '@sten-design/theme': 1.0.0
+    dependencies:
+      '@sten-design/icons': link:../sten-icons
+      '@sten-design/theme': link:../sten-theme
+
+  packages/sten-icons:
+    specifiers: {}
+
+  packages/sten-theme:
+    specifiers: {}
 
 packages:
 
